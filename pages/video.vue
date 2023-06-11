@@ -6,15 +6,17 @@
     width="500"
   ></video>
   <div>
-    <div class="player-container">
-      <vue-core-video-player :src="videoPath"></vue-core-video-player>
-    </div>
+    <VideoPlayer src="../assets/videos/mov_hts-samp003.mp4" />
   </div>
 </template>
 
 <script>
+import VideoPlayer from 'nuxt-video-player'
 export default {
   layout: 'video',
+  components: {
+    VideoPlayer,
+  },
   data() {
     return {
       videoPath: '../assets/videos/mov_hts-samp003.mp4',
