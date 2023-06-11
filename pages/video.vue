@@ -7,9 +7,7 @@
   ></video>
   <div>
     <div class="player-container">
-      <vue-core-video-player
-        src="../assets/videos/mov_hts-samp003.mp4"
-      ></vue-core-video-player>
+      <vue-core-video-player :src="videoPath"></vue-core-video-player>
     </div>
   </div>
 </template>
