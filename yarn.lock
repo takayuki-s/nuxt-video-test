@@ -1477,6 +1477,11 @@ core-js@^2.6.5:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
   integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
 
+core-js@^3.6.5:
+  version "3.31.0"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.31.0.tgz#4471dd33e366c79d8c0977ed2d940821719db344"
+  integrity sha512-NIp2TQSGfR6ba5aalZD+ZQ1fSxGhDo/s1w0nx3RYzf2pnJxt7YynxFlFScP6eV7+GZsKO95NSjGxyJsU3DZgeQ==
+
 core-util-is@~1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.3.tgz#a6042d3634c2b27e9328f837b965fac83808db85"
@@ -3387,6 +3392,14 @@ nuxi@3.5.2:
   optionalDependencies:
     fsevents "~2.3.2"
 
+nuxt-video-player@^1.0.17:
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/nuxt-video-player/-/nuxt-video-player-1.0.17.tgz#1292693574e2b0df0cc3331c2d75bdb38c9db8a5"
+  integrity sha512-Oiu6HN+jnY22XhsC7bzim0Ubo4ZFD2Fv+fA2LvOqmOdAjasFV+4ltRiD7E4b1tx9R+KaGXcNIk7xSTIPl4Ks5Q==
+  dependencies:
+    core-js "^3.6.5"
+    vue "^2.6.11"
+
 nuxt@^3.5.2:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.5.2.tgz#1471ddb21d57d18589ac83c7b8fa6e17c0e518f0"
@@ -4828,7 +4841,7 @@ vue3-canvas-video-player@^1.0.3, vue3-canvas-video-player@^1.2.3:
     vue "^3.2.41"
     vue3-canvas-video-player "^1.0.3"
 
-vue@^2.6.10:
+vue@^2.6.10, vue@^2.6.11:
   version "2.7.14"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.7.14.tgz#3743dcd248fd3a34d421ae456b864a0246bafb17"
   integrity sha512-b2qkFyOM0kwqWFuQmgd4o+uHGU7T+2z3T+WQp8UBjADfEv2n4FEMffzBmCKNP0IGzOEEfYjvtcC62xaSKeQDrQ==
