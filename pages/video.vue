@@ -5,18 +5,12 @@
     controls
     width="500"
   ></video>
-  <div>
-    <VideoPlayer src="../assets/videos/mov_hts-samp003.mp4" />
-  </div>
+  <div></div>
 </template>
 
 <script>
-import VideoPlayer from 'nuxt-video-player'
 export default {
   layout: 'video',
-  components: {
-    VideoPlayer,
-  },
   data() {
     return {
       videoPath: '../assets/videos/mov_hts-samp003.mp4',
