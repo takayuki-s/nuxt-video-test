@@ -15,18 +15,6 @@ import { ref } from 'vue'
 const src = ref()
 const previewVideo = ref()
 
-// ファイルを読みんでDataURL(Base64文字列)を返す
-const readFileAsDataURL = (file) => {
-  console.log('file!', file)
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader()
-    reader.onload = (evt) => {
-      resolve(evt.target.result)
-    }
-    reader.onerror = reject
-    reader.readAsDataURL(file)
-  })
-}
 // ファイル選択
 const fileSelect = async (e) => {
   console.log('ファイルチェンジ！', e)
@@ -34,9 +22,8 @@ const fileSelect = async (e) => {
   if (!file || !file.type.match('video/*')) {
     return
   }
-  const data = await readFileAsDataURL(file)
   // 選択された動画を見えるようにする。
-  src.value = data
+  src.value = URL.createObjectURL(file)
   console.log('src!', src.value)
   // ロードする
   previewVideo.value.load()
