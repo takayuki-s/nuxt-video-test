@@ -7,7 +7,12 @@
       accept="video/mp4"
       @change="fileSelect"
     />
-    <video controls ref="previewVideo" @loadedmetadata="checkDuration">
+    <video
+      controls
+      preload="none"
+      ref="previewVideo"
+      @loadedmetadata="checkDuration"
+    >
       <source :src="src" type="video/mp4" />
     </video>
   </div>
