@@ -22,7 +22,8 @@
 import { ref } from 'vue'
 const src = ref(null)
 const previewVideo = ref(null)
-const MAX_DURATION = 15
+const MIN_DURATION = 10
+const MAX_DURATION = 60
 const MAX_SIZE = 4000000
 
 const fileSelect = async (e) => {
@@ -32,6 +33,7 @@ const fileSelect = async (e) => {
     clearFile()
     return
   }
+
   if (file.size > MAX_SIZE) {
     alert('ファイルサイズが大きすぎます')
     clearFile()
@@ -42,7 +44,11 @@ const fileSelect = async (e) => {
 }
 const checkDuration = () => {
   if (previewVideo.value.duration > MAX_DURATION) {
-    alert('再生時間が長いすぎます')
+    alert('再生時間が長すぎます')
+    clearFile()
+  }
+  if (previewVideo.value.duration < MIN_DURATION) {
+    alert('再生時間が短すぎます')
     clearFile()
   }
 }
