@@ -1,21 +1,23 @@
 <template>
-  <h1>This is video Page</h1>
-  <div class="file-input">
-    <input
-      id="file-input"
-      type="file"
-      accept="video/mp4"
-      @change="fileSelect"
-    />
-    <video
-      controls
-      preload="none"
-      ref="previewVideo"
-      @loadedmetadata="checkDuration"
-    >
-      <source :src="src" type="video/mp4" />
-    </video>
-  </div>
+  <NuxtLayout>
+    <h1>This is video Page</h1>
+    <div class="file-input">
+      <input
+        id="file-input"
+        type="file"
+        accept="video/mp4"
+        @change="fileSelect"
+      />
+      <video
+        controls
+        preload="none"
+        ref="previewVideo"
+        @loadedmetadata="checkDuration"
+      >
+        <source :src="src" type="video/mp4" />
+      </video>
+    </div>
+  </NuxtLayout>
 </template>
 
 <script setup>
