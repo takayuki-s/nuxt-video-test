@@ -17,6 +17,9 @@
       >
         <source :src="src" type="video/mp4" />
       </video>
+      <div>
+        <button @click="saveFile">保存</button>
+      </div>
     </div>
   </NuxtLayout>
 </template>
@@ -62,6 +65,10 @@ const clearFile = () => {
   src.value = null
   previewVideo.value.load()
 }
+const saveFile = () => {
+  const video = document.getElementById('file-input')
+  console.log(video.value)
+}
 </script>
 
 <style>
@@ -69,7 +76,7 @@ const clearFile = () => {
   width: 1000px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 .error {
   color: #ff0000;
