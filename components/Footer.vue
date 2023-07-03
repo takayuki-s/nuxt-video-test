@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-white shadow dark:bg-gray-800">
+  <footer class="bg-teal-100 shadow dark:bg-gray-800">
     <div
       class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
     >
@@ -33,6 +33,5 @@
 <style>
 .footer {
   padding: 10px;
-  background-color: lightblue;
 }
 </style>
